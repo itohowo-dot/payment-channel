@@ -63,10 +63,9 @@
   (is-eq (len signature) u65)
 )
 
-
 ;; Helper Functions
 (define-private (uint-to-buff (n uint))
-  (unwrap-panic (to-consensus-buff? n))
+  (unwrap-panic (uint-to-buff? n))
 )
 
 (define-private (verify-signature 
