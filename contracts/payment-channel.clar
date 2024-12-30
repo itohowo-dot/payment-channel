@@ -29,3 +29,20 @@
 (define-constant ERR-CHANNEL-CLOSED (err u105))
 (define-constant ERR-DISPUTE-PERIOD (err u106))
 (define-constant ERR-INVALID-INPUT (err u107))
+
+;; Data Maps
+(define-map payment-channels 
+  {
+    channel-id: (buff 32),
+    participant-a: principal,
+    participant-b: principal
+  }
+  {
+    total-deposited: uint,
+    balance-a: uint,
+    balance-b: uint,
+    is-open: bool,
+    dispute-deadline: uint,
+    nonce: uint
+  }
+)
